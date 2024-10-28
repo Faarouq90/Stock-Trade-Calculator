@@ -1,4 +1,6 @@
 import sys
+import csv
+from datetime import datetime
 from PyQt6.QtCore import QDate
 from PyQt6.QtWidgets import QLabel, QComboBox, QCalendarWidget, QDialog, QApplication, QGridLayout, QSpinBox
 from datetime import datetime
@@ -34,33 +36,8 @@ class StockTradeProfitCalculator(QDialog):
             print("Amazon not found in the dataset. Available stocks:", self.data.keys())
             self.sellCalendarDefaultDate = QDate.currentDate()  # Default to the current date
 
-        # TODO: Define buyCalendarDefaultDate
-
-        # TODO: create QLabel for Stock selection
-
-        # TODO: create QComboBox and populate it with a list of Stocks
-
-        # TODO: create CalendarWidgets for selection of purchase and sell dates
-
-        # TODO: create QSpinBox to select Stock quantity purchased
-
-        # TODO: create QLabels to show the Stock purchase total
-
-        # TODO: create QLabels to show the Stock sell total
-
-        # TODO: create QLabels to show the Stock profit total
-
-        # TODO: initialize the layout - 6 rows to start
-
-        # TODO: set the calendar values
-        # purchase: two weeks before most recent
-        # sell: most recent
-
-        # TODO: connecting signals to slots so that a change in one control updates the UI
-
-        # TODO: set the window title
-        # TODO: update the UI
-
+        # Set the window title
+        self.setWindowTitle("Stock Trade Profit Calculator")
     def updateUi(self):
         '''
         This requires substantial development.
