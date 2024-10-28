@@ -38,6 +38,13 @@ class StockTradeProfitCalculator(QDialog):
 
         # Set the window title
         self.setWindowTitle("Stock Trade Profit Calculator")
+
+        #Qlabel for stock selection
+        self.stockLabel = QLabel("Select Stock:")
+        self.stockComboBox = QComboBox()
+        self.stockComboBox.addItems(self.data.keys())  # Populate with stock names
+
+
     def updateUi(self):
         '''
         This requires substantial development.
