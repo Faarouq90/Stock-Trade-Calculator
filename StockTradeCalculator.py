@@ -44,6 +44,10 @@ class StockTradeProfitCalculator(QDialog):
         self.stockComboBox = QComboBox()
         self.stockComboBox.addItems(self.data.keys())  # Populate with stock names
 
+        # Create QSpinBox for stock quantity
+        self.quantityLabel = QLabel("Quantity:")
+        self.quantitySpinBox = QSpinBox()
+        self.quantitySpinBox.setMinimum(1)  # Set minimum to 1
 
     def updateUi(self):
         '''
