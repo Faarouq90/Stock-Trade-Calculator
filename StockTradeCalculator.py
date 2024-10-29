@@ -62,6 +62,20 @@ class StockTradeProfitCalculator(QDialog):
         self.sellTotalLabel = QLabel("Sell Total: $0.00")
         self.profitTotalLabel = QLabel("Profit/Loss: $0.00")
 
+        # Layout initialization
+        layout = QGridLayout()
+        layout.addWidget(self.stockLabel, 0, 0)
+        layout.addWidget(self.stockComboBox, 0, 1)
+        layout.addWidget(self.quantityLabel, 1, 0)
+        layout.addWidget(self.quantitySpinBox, 1, 1)
+        layout.addWidget(QLabel("Purchase Date:"), 2, 0)
+        layout.addWidget(self.purchaseDateCalendar, 2, 1)
+        layout.addWidget(QLabel("Sell Date:"), 3, 0)
+        layout.addWidget(self.sellDateCalendar, 3, 1)
+        layout.addWidget(self.purchaseTotalLabel, 4, 0, 1, 2)
+        layout.addWidget(self.sellTotalLabel, 5, 0, 1, 2)
+        layout.addWidget(self.profitTotalLabel, 6, 0, 1, 2)
+
 
     def updateUi(self):
         '''
