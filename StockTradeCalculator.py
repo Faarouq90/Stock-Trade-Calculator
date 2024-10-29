@@ -101,6 +101,10 @@ class StockTradeProfitCalculator(QDialog):
             purchase_date = self.purchaseDateCalendar.selectedDate().toPyDate()
             sell_date = self.sellDateCalendar.selectedDate().toPyDate()
 
+            # Convert selected dates to tuple format
+            purchase_date_tuple = (purchase_date.year, purchase_date.month, purchase_date.day)
+            sell_date_tuple = (sell_date.year, sell_date.month, sell_date.day)
+
 
             pass  # placeholder for future code
         except Exception as e:
