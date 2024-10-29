@@ -114,7 +114,11 @@ class StockTradeProfitCalculator(QDialog):
             sell_total = sell_price * quantity
             profit_loss = sell_total - purchase_total
 
-            pass  # placeholder for future code
+            # Update labels with calculated totals
+            self.purchaseTotalLabel.setText(f"Purchase Total: ${purchase_total:.2f}")
+            self.sellTotalLabel.setText(f"Sell Total: ${sell_total:.2f}")
+            self.profitTotalLabel.setText(f"Profit/Loss: ${profit_loss:.2f}")
+
         except Exception as e:
             print(f"Error in updateUi: {e}")
 
