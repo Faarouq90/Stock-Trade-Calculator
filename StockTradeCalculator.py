@@ -85,6 +85,9 @@ class StockTradeProfitCalculator(QDialog):
         self.purchaseDateCalendar.selectionChanged.connect(self.updateUi)
         self.sellDateCalendar.selectionChanged.connect(self.updateUi)
 
+        # Initial UI update
+        self.updateUi()
+
 
     def updateUi(self):
         '''
@@ -92,11 +95,13 @@ class StockTradeProfitCalculator(QDialog):
         Updates the UI when control values are changed; should also be called when the app initializes.
         '''
         try:
-            # TODO: get selected dates from calendars
+            # Get selected stock, quantity, and dates from controls
+            selected_stock = self.stockComboBox.currentText()
+            quantity = self.quantitySpinBox.value()
+            purchase_date = self.purchaseDateCalendar.selectedDate().toPyDate()
+            sell_date = self.sellDateCalendar.selectedDate().toPyDate()
 
-            # TODO: perform necessary calculations to calculate totals
 
-            # TODO: update the label displaying totals
             pass  # placeholder for future code
         except Exception as e:
             print(f"Error in updateUi: {e}")
