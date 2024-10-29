@@ -109,6 +109,11 @@ class StockTradeProfitCalculator(QDialog):
             purchase_price = self.data[selected_stock].get(purchase_date_tuple, 0.0)
             sell_price = self.data[selected_stock].get(sell_date_tuple, 0.0)
 
+            # Calculate totals and profit/loss
+            purchase_total = purchase_price * quantity
+            sell_total = sell_price * quantity
+            profit_loss = sell_total - purchase_total
+
             pass  # placeholder for future code
         except Exception as e:
             print(f"Error in updateUi: {e}")
