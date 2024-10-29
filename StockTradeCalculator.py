@@ -57,6 +57,10 @@ class StockTradeProfitCalculator(QDialog):
         self.sellDateCalendar = QCalendarWidget()
         self.sellDateCalendar.setSelectedDate(QDate.currentDate())  # Default to today
 
+        # Create labels for totals
+        self.purchaseTotalLabel = QLabel("Purchase Total: $0.00")
+        self.sellTotalLabel = QLabel("Sell Total: $0.00")
+        self.profitTotalLabel = QLabel("Profit/Loss: $0.00")
 
 
     def updateUi(self):
