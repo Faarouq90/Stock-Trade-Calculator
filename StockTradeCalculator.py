@@ -49,6 +49,10 @@ class StockTradeProfitCalculator(QDialog):
         self.quantitySpinBox = QSpinBox()
         self.quantitySpinBox.setMinimum(1)  # Set minimum to 1
 
+        # Create QCalendarWidget for purchase date
+        self.purchaseDateCalendar = QCalendarWidget()
+        self.purchaseDateCalendar.setSelectedDate(QDate.currentDate().addDays(-14))  # Default to 2 weeks ago
+
     def updateUi(self):
         '''
         This requires substantial development.
