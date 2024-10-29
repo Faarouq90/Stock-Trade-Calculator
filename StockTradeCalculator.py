@@ -76,6 +76,15 @@ class StockTradeProfitCalculator(QDialog):
         layout.addWidget(self.sellTotalLabel, 5, 0, 1, 2)
         layout.addWidget(self.profitTotalLabel, 6, 0, 1, 2)
 
+        # Set the layout
+        self.setLayout(layout)
+
+        # Connect signals to slots
+        self.stockComboBox.currentIndexChanged.connect(self.updateUi)
+        self.quantitySpinBox.valueChanged.connect(self.updateUi)
+        self.purchaseDateCalendar.selectionChanged.connect(self.updateUi)
+        self.sellDateCalendar.selectionChanged.connect(self.updateUi)
+
 
     def updateUi(self):
         '''
