@@ -53,6 +53,12 @@ class StockTradeProfitCalculator(QDialog):
         self.purchaseDateCalendar = QCalendarWidget()
         self.purchaseDateCalendar.setSelectedDate(QDate.currentDate().addDays(-14))  # Default to 2 weeks ago
 
+        # Create QCalendarWidget for sell date
+        self.sellDateCalendar = QCalendarWidget()
+        self.sellDateCalendar.setSelectedDate(QDate.currentDate())  # Default to today
+
+
+
     def updateUi(self):
         '''
         This requires substantial development.
